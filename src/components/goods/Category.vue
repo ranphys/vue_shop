@@ -143,7 +143,8 @@ export default {
         params: this.queryInfo,
       });
       if (res.meta.status !== 200) this.$message.error("请求分类列表失败");
-      this.cateList = res.data.result;
+      this.cateList = res.data.result
+      console.log(res.data);
       this.total = res.data.total;
     },
     handleSizeChange(newSize) {
